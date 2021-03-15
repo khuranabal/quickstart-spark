@@ -7,15 +7,20 @@ getting started with spark using docker on local
 * wsl distro: debian
 
 ## build docker image
-clone repo and run below on the debian in the repo path
+clone repo on path /usr/src/repo/local/
+```
+git clone git@github.com:khuranabal/quickstart-spark.git
+```
+
+run below on the debian in the repo path
 ```
 docker build -t pyspark-local -f Dockerfile .
 ```
 
 ## run container
-run below to start the container with jupyter, get the token after container is started
+run below to start the container with jupyter in the repo path (so as volume can be shared), get the token after container is started
 ```
-docker run --rm -it -p 8888:8888 -v /app:/app pyspark-local
+docker run --rm -it -p 8888:8888 -v /usr/src/repo/local/quickstart-spark/test:/app pyspark-local
 ```
 
 ## access jupyter notebook from localhost and run pyspark
