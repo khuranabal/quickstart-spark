@@ -10,7 +10,7 @@ RUN apt-get update \
 RUN pip3 install jupyter
 RUN pip3 install py4j==0.10.7
 
-ENV SPARK_VERSION 2.4.7
+ENV SPARK_VERSION 3.1.1
 ENV HADOOP_VERSION 2.7
 ENV SPARK_PACKAGE spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}
 ENV SPARK_HOME /usr/spark-${SPARK_VERSION}

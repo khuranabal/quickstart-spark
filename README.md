@@ -14,13 +14,13 @@ git clone git@github.com:khuranabal/quickstart-spark.git
 
 run below on the debian in the repo path
 ```
-docker build -t pyspark-local -f Dockerfile .
+make docker-build
 ```
 
 ## run container
 run below to start the container with jupyter in the repo path (so as volume can be shared), get the token after container is started
 ```
-docker run --rm -it -p 8888:8888 -v /usr/src/repo/local/quickstart-spark/test:/app pyspark-local
+make docker-run
 ```
 
 ## access jupyter notebook from localhost and run pyspark
